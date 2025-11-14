@@ -32,6 +32,39 @@ npm run type-check
 
 Visit `http://localhost:3000` to explore the demo.
 
+## 🚀 Production Deployment with PM2
+
+This project includes PM2 configuration for production-grade process management with features like auto-restart, load balancing, and monitoring.
+
+### Quick PM2 Setup
+
+```bash
+# Install dependencies (includes PM2)
+npm install
+
+# Build the application
+npm run build
+
+# Start with PM2 (cluster mode with auto load balancing)
+npm run pm2:start
+
+# View status and logs
+npm run pm2:status
+npm run pm2:logs
+```
+
+### PM2 Commands
+
+```bash
+npm run pm2:start      # Start in production mode (cluster)
+npm run pm2:dev        # Start in development mode
+npm run pm2:stop       # Stop the application
+npm run pm2:reload     # Zero-downtime reload
+npm run pm2:monit      # Interactive monitoring dashboard
+```
+
+**For detailed PM2 documentation, see [PM2.md](./PM2.md)**
+
 ## 📊 What This Demo Shows
 
 ### Performance Optimizations
